@@ -1,0 +1,148 @@
+<!doctype html>  
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Shopping List</title>
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+		<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+		<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+</head>
+<body>
+	<div data-role="page" id="home">
+	
+		<div data-role="header" data-position="fixed">
+			<h1>Shopping List</h1>
+			<a href="#" id="searchButton" data-icon="search" data-theme="b" class="ui-btn-right searchButton">Search</a>
+		</div>
+		
+		<div data-role="content">
+			<div class="ui-grid-solo">
+				<div class="ui-block-a">
+					<a href="#additem" data-theme="e" data-role="button">
+						<img src="images/Shopping-List-CTA.png" style="align: center"/>
+					</a>
+				</div>
+				<div class="ui-block-a"><p>An app to help organize what you want to buy and where you want to buy it.</p></div>
+			</div>
+			<ul data-role="listview" id="itemList" data-filter="true">
+				<li data-role="list-divider" data-theme="a" align="center">Browse By...</li>
+				<li>
+					<a href="#pageName">
+<!-- 						<img src="images/.png" /> -->
+						<h4>Name</h4>
+					</a>
+				</li>
+				<li>
+					<a href="#pageStore">
+<!-- 						<img src="images/.png" /> -->
+						<h4>Store</h4>
+					</a>
+				</li>
+				<li>
+					<a href="#pageBudget">
+<!-- 						<img src="images/.png" /> -->
+						<h4>Budget</h4>
+					</a>
+				</li>
+				<li>
+					<a href="#pageCost">
+<!-- 						<img src="images/.png" /> -->
+						<h4>Estimated Cost</h4>
+					</a>
+				</li>
+				<li>
+					<a href="#pageDate">
+<!-- 						<img src="images/.png" /> -->
+						<h4>Date Added</h4>
+					</a>
+				</li>
+			</ul>
+		</div>
+		
+		<!--
+<div data-role="footer" data-position="fixed" data-id="constant">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#" data-icon="arrow-l" class="ui-btn-disbaled">Nav</a></li>
+					<li><a href="#" data-icon="home" class="ui-btn-active ui-state-persist">Nav</a></li>
+					<li><a href="#" data-icon="info">Nav</a></li>
+					<li><a href="#" data-icon="grid">Nav</a></li>
+				</ul>
+			</div>
+		</div>
+-->
+	
+	</div> <!-- End "home" page -->
+	
+	
+	<div data-role="page" id="additem">
+	
+		<div data-role="header" data-position="fixed">
+			<a href="#home" data-icon="home" data-iconpos="notext" data-theme="e"></a>
+			<h1>Add Item</h1>
+		</div>
+		
+		<div data-role="content">
+			<h1>Item Information</h1>
+		<form action="#" method="post" id="buffForm">
+			<fieldset>
+				<legend>Item Description</legend>
+				<ul id="errors"></ul>
+				<ul>
+					<li>
+						<label for="itemName">Item Name:</label><input type="text" id="itemName" />
+					</li>
+					<li>
+						<label for="itemStore">Item Type:</label>
+						<select id="itemStore">
+							<option id="typeAlbertsons" value="albertsons">Albertsons</option>
+							<option id="typeCostco" value="costco">Costco</option>
+							<option id="typeTraderJoes" value="TraderJoes">Trader Joes</option>
+						</select>
+					</li>
+					<li>
+						<label for="itemBudget">Budget:</label><input type="text" id="itemBudget" />
+					</li>
+					<li>
+						<label for="itemCost">Estimated Cost:</label><input type="text" id="itemCost" />
+					</li>
+					<li>
+						<label for="itemDate">Date Added:</label>
+						<input type="date" id="itemDate" />
+					</li>
+				</ul>
+			</fieldset>
+			<input type="submit" value="Add item" id="submit" />
+		</form>
+		<a href="#" id="clear">Clear Stored Data</a>
+		<a href="#" id="displayLink">Display Data</a>
+		</div>
+		
+		<div data-role="footer" data-position="fixed" data-id="constant">
+			<!--
+<div data-role="navbar">
+				<ul>
+					<li><a href="#shoppingList" data-icon="grid">Nav</a></li>
+					<li><a href="#additem" data-icon="plus" class="ui-btn-active ui-state-persist">Nav</a></li>
+				</ul>
+			</div>
+-->
+		</div>
+	
+	</div> <!-- End of "additem" page -->
+	
+	<!-- JavaScript under here -->
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+	<script type="text/javascript" src="js/json.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
