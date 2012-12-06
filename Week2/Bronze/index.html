@@ -1,0 +1,265 @@
+<!doctype html>  
+<!-- Author: Brian Enell, Project: MIU1212 -->
+<!-- testing a change -->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Shopping List</title>
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+		<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+		<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+</head>
+<body>
+	<div data-role="page" id="home">
+	
+		<div data-role="header" data-position="fixed">
+			<h1>Shopping List</h1>
+			<a href="#searchPage" id="searchButton" data-icon="search" data-theme="b" class="ui-btn-right searchButton">Search</a>
+		</div>
+		
+		<div data-role="content">
+			<div class="ui-grid-solo">
+				<div class="ui-block-a">
+					<a href="#additem" data-theme="e" data-role="button">
+						<img src="images/shopping-list-cta.png" style="align: center, width: 100px"/>
+					</a>
+				</div>
+				<div class="ui-block-a"><p>An app to help organize what you want to buy and where you want to buy it.</p></div>
+			</div>
+			<ul data-role="listview" id="itemList">
+				<li data-role="list-divider" data-theme="a" align="center">Browse By...</li>
+				<li>
+					<!-- <a href="#pageName"> -->
+					<a href="#error404">
+<!-- 						<img src="images/.png" /> -->
+						<h4>Name</h4>
+					</a>
+				</li>
+				<li>
+					<!-- <a href="#pageStore"> -->
+					<a href="#error404">
+<!-- 						<img src="images/.png" /> -->
+						<h4>Store</h4>
+					</a>
+				</li>
+				<li>
+					<!-- <a href="#pageBudget"> -->
+					<a href="#error404">
+<!-- 						<img src="images/.png" /> -->
+						<h4>Budget</h4>
+					</a>
+				</li>
+				<li>
+					<!-- <a href="#pageCost"> -->
+					<a href="#error404">
+<!-- 						<img src="images/.png" /> -->
+						<h4>Estimated Cost</h4>
+					</a>
+				</li>
+				<li>
+					<!-- <a href="#pageDate"> -->
+					<a href="#error404">
+<!-- 						<img src="images/.png" /> -->
+						<h4>Date Added</h4>
+					</a>
+				</li>
+			</ul>
+		</div>
+		
+		<div data-role="footer" data-position="fixed" data-id="constant">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home" class="ui-btn-active ui-state-persist">Home/Browse</a></li>
+					<li><a href="#addItem" data-icon="plus">Add Item</a></li>
+					<li><a href="#newsfeed" data-icon="info">News</a></li>
+					<li><a href="#about" data-icon="grid">About</a></li>
+				</ul>
+			</div>
+		</div>
+	
+	</div> <!-- End "home" page -->
+	
+	
+	<div data-role="page" id="addItem">
+	
+		<div data-role="header" data-position="fixed">
+			<!-- <a href="#home" data-icon="home" data-iconpos="notext" data-theme="e"></a> -->
+			<h1>Add Item</h1>
+		</div>
+		
+		<div data-role="content">
+			<p>The add item form goes here.</p>
+		</div>
+		
+		<div data-role="footer" data-position="fixed" data-id="constant">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home/Browse</a></li>
+					<li><a href="#addItem" data-icon="plus" class="ui-btn-active ui-state-persist">Add Item</a></li>
+					<li><a href="#newsfeed" data-icon="info">News</a></li>
+					<li><a href="#about" data-icon="grid">About</a></li>
+				</ul>
+			</div>
+		</div>
+	
+	</div> <!-- End of "additem" page -->
+	
+	<div data-role="page" id="newsfeed">
+		
+			<div data-role="header" data-position="fixed">
+				<!-- <a href="#home" data-icon="home" data-iconpos="notext" data-theme="e"></a> -->
+				<h1>Newsfeed</h1>
+			</div>
+			
+			<div data-role="content">
+				<p>Listen, we all know that the news is really just a bad joke. They're based on a for profit model which makes them need to report things that people will want to buy, with either their time(TV) or money(Paper). That said, here's some news.
+				</p>
+				<div class="ui-grid-a">
+					<div class="ui-block-a" style="width:110px">
+						<img src="images/globe.jpeg" style="width:100px"/>
+					</div>
+					<div class="ui-block-b">
+						<h3>First World Problems</h3>
+						<p>People complain about having to choose a language at the ATM. Seriously? Get it together people, press the button and move on with life.</p>
+					</div>					
+					<div class="ui-block-a" style="width:110px">
+						<img src="images/squirrel.jpg" style="width:100px"/>
+					</div>
+					<div class="ui-block-b">
+						<h3>State of Education</h3>
+						<p>State with many trees begins accepting squirrels into state university. "They're all around the campus, and we figured, hey, why not just let them come to class?" says dean Dean Ocelottamotakotakon.</p>
+					</div>
+					<div class="ui-block-a" style="width:110px">
+						<img src="images/troll.jpg" style="width:100px"/>
+					</div>
+					<div class="ui-block-b">
+						<h3>Trolls found to be Idiots</h3>
+						<p>It used to be a widely held belief that trolls knew what they were talking about, and purposefully fed misinformation into the system "for the lulz". A new study though finds that in a majority of cases, people claiming to be trolls are just plain stupid.</p>
+					</div>
+					<div class="ui-block-a" style="width:110px">
+						<img src="images/iron-man.jpg" style="width:100px"/>
+					</div>
+					<div class="ui-block-b">
+						<h3>Iron Man is Awesome!</h3>
+						<p>Seriously. He's like my favorite super hero. I didn't start reading comics until a few years ago, but Iron Man has really always been my favorite. No super powers, just a great mind and a knack for engineering.Oh, and he's an alcoholic. Super hero alcoholic, why?Because he's human, and has flaws. Now that's someone I want to read about and aspire to be, I mean, except for the alcoholism.</p>
+					</div>
+				</div>
+			</div>
+			
+			<div data-role="footer" data-position="fixed" data-id="constant">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home/Browse</a></li>
+						<li><a href="#addItem" data-icon="plus">Add Item</a></li>
+						<li><a href="#newsfeed" data-icon="info" class="ui-btn-active ui-state-persist">News</a></li>
+						<li><a href="#about" data-icon="grid">About</a></li>
+					</ul>
+				</div>
+			</div>
+		
+		</div> <!-- End of "newsfeed" page -->
+		
+	<div data-role="page" id="about">
+		
+			<div data-role="header" data-position="fixed">
+				<!-- <a href="#home" data-icon="home" data-iconpos="notext" data-theme="e"></a> -->
+				<h1>About</h1>
+			</div>
+			
+			<div data-role="content">
+				<p>An about page.
+					My name is Brian, I designed and developed this page. Yea, it's pretty basic right now, but someday, someday my prince will come... I mean, someday this will be something useful and functional.<br>
+					<br>
+					Man, I need to lay off the Disney before bed.<br>
+					<br>
+					Anyway, I still don't have a functioning CRUD. Why? Well, part of it is I still don't have a firm grasp of JavaScript, so coding for function is harder than I want it to be. I try to practice, but learning this along with everything else is proving to be challenging. It would probably be easier if I had a copy of it when it functioned, but I don't. I am trying to rebuild it in JQM, but the API is challenging with no direction. I could watch the videos for week three before turning in week two to complete it, but frankly, it's 3 am and I'm out of diet coke, so it will have to do for now.
+				</p>
+				<p>Anyway, I suppose I should give credit to the internet for all those images I stole. However, I believe that I'm covered under the fair use part of copyright law, as they were easy to get and I'm using them as satire for the news.
+				</p>
+				<p>Oh, and here's a useless button that may or may not work to get you to my Bronze app.</p>
+				<a data-role="button" href="#error404">Bronze App</a>
+			</div>
+			
+			<div data-role="footer" data-position="fixed" data-id="constant">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home/Browse</a></li>
+						<li><a href="#addItem" data-icon="plus">Add Item</a></li>
+						<li><a href="#newsfeed" data-icon="info">News</a></li>
+						<li><a href="#about" data-icon="grid" class="ui-btn-active ui-state-persist">About</a></li>
+					</ul>
+				</div>
+			</div>
+		
+	</div> <!-- End of "about" page -->
+	
+	<div data-role="page" id="searchPage">
+		
+			<div data-role="header" data-position="fixed">
+				<!-- <a href="#home" data-icon="home" data-iconpos="notext" data-theme="e"></a> -->
+				<h1>Search</h1>
+			</div>
+			
+			<div data-role="content">
+				<p>This will eventually contain a search mechanism. I want to do it this way because I want to use the JQM data filter for live search. What I intend to do is populate the page with the entire contents of local storage so that they can be live filtered with the listview filter.</p>
+			</div>
+			
+			<div data-role="footer" data-position="fixed" data-id="constant">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home/Browse</a></li>
+						<li><a href="#addItem" data-icon="plus">Add Item</a></li>
+						<li><a href="#newsfeed" data-icon="info">News</a></li>
+						<li><a href="#about" data-icon="grid">About</a></li>
+					</ul>
+				</div>
+			</div>
+		
+		</div> <!-- End of "searchPage" page -->
+	
+	<div data-role="page" id="error404"> <!-- Begin 404, which should be obvious by the ID -->
+	
+		<div data-role="header" data-position="fixed">
+			<!-- <a href="#home" data-icon="home" data-iconpos="notext" data-theme="e"></a> -->
+			<h1>404:File Not Found</h1>
+		</div>
+		
+		<div data-role="content">
+			<h1>I swear this doesn't happen all the time...</h1>
+			<p>The page you were looking for wasn't found, this is likely due to one of the following:
+				<ul>
+					<li>The address you typed in was wrong. This is likely if you are new to using a keyboard or simply bad at spelling.</li>
+					<li>The page isn't built yet. This is actually the most likely reason. I'm still pretty new at this and unintentionally break a lot of pages.</li>
+					<li>The page works, but is currently passed out on the couch. Dude, we had this killer party last night and that page drank like a champion.</li>
+				</ul>					
+			</p>
+		</div>
+		
+		<div data-role="footer" data-position="fixed" data-id="constant">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home/Browse</a></li>
+					<li><a href="#addItem" data-icon="plus">Add Item</a></li>
+					<li><a href="#newsfeed" data-icon="info">News</a></li>
+					<li><a href="#about" data-icon="grid">About</a></li>
+				</ul>
+			</div>
+		</div>
+	
+	</div> <!-- End of "error404" page -->
+	
+	<!-- JavaScript under here -->
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+	<script type="text/javascript" src="js/json.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
