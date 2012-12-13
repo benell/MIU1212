@@ -13,13 +13,13 @@
 	<meta http-equiv="cleartype" content="on">
 		<!-- StyleSheets under here -->
 	<link rel="stylesheet" href="themes/datcolor.min.css" />
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile.structure-1.2.0.min.css" />
 	<link rel="stylesheet" href="css/style.css" />
 		<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 	<script src="js/libs/modernizr.custom.min.js"></script>
 </head>
 <body>
-	<div data-role="page" id="home" data-theme="a">
+	<div data-role="page" id="home" data-theme="A">
 	
 		<div data-role="header" data-position="fixed">
 			<h1>Shopping List</h1>
@@ -28,14 +28,14 @@
 		
 		<div data-role="content">
 			<div class="ui-grid-solo">
-				<div class="ui-block-a">
-					<a href="#addItem" data-theme="e" data-role="button" style="margin:0"> <!-- Inline style used to correct JQM wierd thing where my button was being pushed off -->
+				<div class="ui-block-a" data-theme="e">
+					<a href="#addItem" data-role="button" style="margin:0"> <!-- Inline style used to correct JQM wierd thing where my button was being pushed off -->
 						<img src="images/shopping-list-cta.png"/>
 					</a>
 				</div>
 				<div class="ui-block-a"><p style="text-align: center">An app to help organize what you want to buy and where you want to buy it.</p></div>
 			</div>
-			<ul data-role="listview" id="itemList">
+			<ul data-role="listview" id="itemList" data-theme="a">
 				<li data-role="list-divider" data-theme="a" align="center">Browse By...</li>
 				<li>
 					<!-- <a href="#pageName"> -->
@@ -140,7 +140,7 @@
 					</div>
 					
 					<div data-role="fieldcontain">
-						<input type="submit" value="Add Item" data-theme="e" />
+						<input type="submit" value="Add Item" data-theme="c" />
 					</div>
 					
 					<input type="reset" value="Reset Form" data-theme="c" id="formReset" data-role="none" hidden/>
@@ -264,7 +264,7 @@
 				<a data-role="button" href="https://github.com/benell/MIU1212.git" data-ajax="false" data-theme="c">GitHub Code</a>
 				
 				<p>Oh, and here's a useless button that may or may not work to get you to my Bronze app.</p>
-				<a data-role="button" href="http://benell.github.com/MIU1212/Week3/Bronze" data-ajax="false" data-theme="e">Bronze App</a>
+				<a data-role="button" href="http://benell.github.com/MIU1212/Week3/Bronze" data-ajax="false" data-theme="b">Bronze App</a>
 				<p>Also, don't hit this button.</p>
 				<a data-role="button" href="#home" id="clearStorage">Clear Local Storage</a>
 			</div>
