@@ -28,11 +28,11 @@
 		<div data-role="content">
 			<div class="ui-grid-solo">
 				<div class="ui-block-a">
-					<a href="#addItem" data-theme="e" data-role="button">
-						<img src="images/shopping-list-cta.png" style="align: center, width: 100%, height: 100%"/>
+					<a href="#addItem" data-theme="e" data-role="button" style="margin:0"> <!-- Inline style used to correct JQM wierd thing where my button was being pushed off -->
+						<img src="images/shopping-list-cta.png"/>
 					</a>
 				</div>
-				<div class="ui-block-a"><p>An app to help organize what you want to buy and where you want to buy it.</p></div>
+				<div class="ui-block-a"><p style="text-align: center">An app to help organize what you want to buy and where you want to buy it.</p></div>
 			</div>
 			<ul data-role="listview" id="itemList">
 				<li data-role="list-divider" data-theme="a" align="center">Browse By...</li>
@@ -61,7 +61,7 @@
 					<!-- <a href="#pageCost"> -->
 					<a href="#error404">
 <!-- 						<img src="images/.png" /> -->
-						<h4>Estimated Cost</h4>
+						<h4>For</h4>
 					</a>
 				</li>
 				<li>
@@ -96,21 +96,95 @@
 		</div>
 		
 		<div data-role="content">
-			<p>The add item form goes here.</p>
+			
+				<form action="" method="post" id="itemForm">
+					
+					<div data-role="fieldcontain">
+						<label for="itemName">Name(Required):</label>
+						<input type="text" name="itemName" id="itemName" class="required"/>
+					</div>
+
+					<div data-role="fieldcontain">
+						<label for="itemStoreList">Store:</label>
+						<select name="itemStoreList" id="itemStoreList">
+							<option value="storeAnywhere">Anywhere Available</option>
+							<option value="costco">Costco</option>
+							<option value="bedBath">Bed, Bath, & Beyond</option>
+							<option value="smokeShop">Marley's Smoke Shop</option>
+							<option value="baconStore">The Bacon Store</option>
+						</select>
+						<label for="itemStore">Store not on the list?</label>
+						<input type="text" name="itemStore" id="itemStore" placeholder="Write a store not in the list here..." />
+						(This might not actually work, probably better to choose from the list.)
+					</div>
+					
+					<div data-role="fieldcontain">
+						<label for="itemBudget">Budget:</label>
+						<input type="range" name="itemBudget" id="itemBudget" value="20" min="0" max="100" />
+					</div>
+					
+					<div data-role="fieldcontain">
+						<label for="itemReason">Reason:</label>
+						<select name="itemReason" id="itemReason">
+							<option value="noReason">Because it's Awesome!</option>
+							<option value="birthday">Birthday</option>
+							<option value="christmas">Christmas</option>
+							<option value="anniversary">Anniversary</option>
+						</select>
+					</div>
+				
+					<div data-role="fieldcontain">
+						<label for="itemFor">For Someone?</label>
+						<input type="text" name="itemFor" id="itemFor" placeholder="i.g.Brad, Friend, or leave it blank" />
+					</div>
+					
+					<div data-role="fieldcontain">
+						<input type="submit" value="Add Item" data-theme="e" />
+					</div>
+					
+					<input type="reset" value="Reset Form" data-theme="c" id="formReset" data-role="none" hidden/>
+					
+					<a href="#itemFormError" id="formErrorLink" data-rel="dialog" data-transition="fade"></a>
+				</form>
 		</div>
 		
 		<div data-role="footer" data-position="fixed" data-id="constant">
-			<div data-role="navbar">
+			<br>
+			<div data-role="navbar" data-iconpos="left">
 				<ul>
-					<li><a href="#home" data-icon="home">Home/Browse</a></li>
-					<li><a href="#addItem" data-icon="plus" class="ui-btn-active ui-state-persist">Add Item</a></li>
-					<li><a href="#newsfeed" data-icon="info">News</a></li>
-					<li><a href="#about" data-icon="grid">About</a></li>
+					<li><a href="#home" id="formCancel" data-icon="arrow-l" data-transition="slidedown">Cancel and go Home</a></li>
 				</ul>
 			</div>
 		</div>
+		
+		<!--
+<div data-role="footer" data-position="fixed" data-id="constant">
+			<h5 data-theme="e">Navigating away does NOT save.</h5>
+			<div data-role="navbar" data-mini="true">
+				<ul>
+					<li><a href="#home" data-icon="home" disabled>Home/Browse</a></li>
+					<li><a href="#addItem" data-icon="plus" class="ui-btn-active ui-state-persist">Add Item</a></li>
+					<li><a href="#newsFeed" data-icon="info" >News</a></li>
+					<li><a href="#about" data-icon="grid" >About</a></li>
+				</ul>
+			</div>
+		</div>
+-->
 	
 	</div> <!-- End of "additem" page -->
+	
+	<div data-role="dialog" id="itemFormError">
+		
+		<div data-role="header" data-position="fixed">
+			<h1>Ummm, so...</h1>
+		</div>
+		
+		<div data-role="content">
+			<p>Ok, so you have to put in a name. I mean, if you don't have a name for the item, why are you even attempting to add it?</p>
+		</div>
+	
+	
+	</div> <!-- End itemFormError page -->
 	
 	<div data-role="page" id="newsfeed">
 		
@@ -185,7 +259,9 @@
 				<p>Anyway, I suppose I should give credit to the internet for all those images I stole. However, I believe that I'm covered under the fair use part of copyright law, as they were easy to get and I'm using them as satire for the news.
 				</p>
 				<p>Oh, and here's a useless button that may or may not work to get you to my Bronze app.</p>
-				<a data-role="button" href="http://benell.github.com/MIU1212/Week2/Bronze" data-ajax="false" data-theme="e">Bronze App</a>
+				<a data-role="button" href="http://benell.github.com/MIU1212/Week3/Bronze" data-ajax="false" data-theme="e">Bronze App</a>
+				<p>Also, don't hit this button.</p>
+				<a data-role="button" href="#home" id="clearStorage">Clear Storage</a>
 			</div>
 			
 			<div data-role="footer" data-position="fixed" data-id="constant">
@@ -259,7 +335,8 @@
 	<!-- JavaScript under here -->
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
-	<script type="text/javascript" src="js/json.js"></script>
+	<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
+	<!-- <script type="text/javascript" src="js/json.js"></script> -->
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
