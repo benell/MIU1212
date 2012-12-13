@@ -102,21 +102,84 @@
 		</div>
 		
 		<div data-role="content">
-			<p>The add item form goes here.</p>
+			
+				<form action="" method="post" id="itemForm">
+					
+					
+						<label for="itemName">Name(Required):</label>
+						<input type="text" name="itemName" id="itemName" class="required"/>
+					
+
+					
+						<label for="itemStoreList">Store:</label>
+						<select name="itemStoreList" id="itemStoreList">
+							<option value="storeAnywhere">Anywhere Available</option>
+							<option value="costco">Costco</option>
+							<option value="bedBath">Bed, Bath, & Beyond</option>
+							<option value="smokeShop">Marley's Smoke Shop</option>
+							<option value="baconStore">The Bacon Store</option>
+						</select>
+						<label for="itemStore">Store not on the list?</label>
+						<input type="text" name="itemStore" id="itemStore" placeholder="Write a store not in the list here..." />
+						(This might not actually work, probably better to choose from the list.)
+					
+					
+					
+						<label for="itemBudget">Budget:</label>
+						<input type="range" name="itemBudget" id="itemBudget" value="20" min="0" max="100" />
+					
+					
+					
+						<label for="itemReason">Reason:</label>
+						<select name="itemReason" id="itemReason">
+							<option value="noReason">Because it's Awesome!</option>
+							<option value="birthday">Birthday</option>
+							<option value="christmas">Christmas</option>
+							<option value="anniversary">Anniversary</option>
+						</select>
+					
+				
+					
+						<label for="itemFor">For Someone?</label>
+						<input type="text" name="itemFor" id="itemFor" placeholder="i.g.Brad, Friend, or leave it blank" />
+					
+					
+					
+						<input type="submit" value="Add Item" data-theme="e" />
+						<br>
+						<input type="reset" value="Reset Form" data-theme="c" id="formReset" data-role="none"/>
+					
+					
+					<a href="#itemFormError" id="formErrorLink" data-rel="dialog" data-transition="fade"></a>
+				</form>
 		</div>
 		
 		<div data-role="footer" data-position="fixed" data-id="constant">
-			<div data-role="navbar">
+			<h5 data-theme="e">Navigating away does NOT save.</h5>
+			<div data-role="navbar" data-mini="true">
 				<ul>
-					<li><a href="#home" data-icon="home">Home/Browse</a></li>
+					<li><a href="#home" data-icon="home" disabled>Home/Browse</a></li>
 					<li><a href="#addItem" data-icon="plus" class="ui-btn-active ui-state-persist">Add Item</a></li>
-					<li><a href="#newsfeed" data-icon="info">News</a></li>
-					<li><a href="#about" data-icon="grid">About</a></li>
+					<li><a href="#newsFeed" data-icon="info" >News</a></li>
+					<li><a href="#about" data-icon="grid" >About</a></li>
 				</ul>
 			</div>
 		</div>
 	
 	</div> <!-- End of "additem" page -->
+	
+	<div data-role="dialog" id="itemFormError">
+		
+		<div data-role="header" data-position="fixed">
+			<h1>Ummm, so...</h1>
+		</div>
+		
+		<div data-role="content">
+			<p>Ok, so you have to put in a name. I mean, if you don't have a name for the item, why are you even attempting to add it?</p>
+		</div>
+	
+	
+	</div> <!-- End itemFormError page -->
 	
 	<div data-role="page" id="newsfeed">
 		

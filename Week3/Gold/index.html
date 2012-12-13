@@ -139,10 +139,11 @@
 					</div>
 					
 					<div data-role="fieldcontain">
-						<input type="submit" value="Add Item" data-theme="e" data-corners="false"/>
+						<input type="submit" value="Add Item" data-theme="e" />
 					</div>
 					
-<!-- 					<input type="reset" value="Reset Form" data-theme="d" /> -->
+					<input type="reset" value="Reset Form" data-theme="c" id="formReset" data-role="none" hidden/>
+					
 					<a href="#itemFormError" id="formErrorLink" data-rel="dialog" data-transition="fade"></a>
 				</form>
 		</div>
@@ -151,7 +152,7 @@
 			<br>
 			<div data-role="navbar" data-iconpos="left">
 				<ul>
-					<li><a href="#home" data-icon="arrow-l" data-transition="slidedown">Cancel and go Home</a></li>
+					<li><a href="#home" id="formCancel" data-icon="arrow-l" data-transition="slidedown">Cancel and go Home</a></li>
 				</ul>
 			</div>
 		</div>
@@ -258,7 +259,9 @@
 				<p>Anyway, I suppose I should give credit to the internet for all those images I stole. However, I believe that I'm covered under the fair use part of copyright law, as they were easy to get and I'm using them as satire for the news.
 				</p>
 				<p>Oh, and here's a useless button that may or may not work to get you to my Bronze app.</p>
-				<a data-role="button" href="http://benell.github.com/MIU1212/Week2/Bronze" data-ajax="false" data-theme="e">Bronze App</a>
+				<a data-role="button" href="http://benell.github.com/MIU1212/Week3/Bronze" data-ajax="false" data-theme="e">Bronze App</a>
+				<p>Also, don't hit this button.</p>
+				<a data-role="button" href="#home" id="clearStorage">Clear Storage</a>
 			</div>
 			
 			<div data-role="footer" data-position="fixed" data-id="constant">
