@@ -100,8 +100,8 @@
 				<form action="" method="post" id="itemForm">
 					
 					<div data-role="fieldcontain">
-						<label for="itemName">Name:</label>
-						<input type="text" name="itemName" id="itemName" />
+						<label for="itemName">Name(Required):</label>
+						<input type="text" name="itemName" id="itemName" class="required"/>
 					</div>
 
 					<div data-role="fieldcontain">
@@ -143,7 +143,7 @@
 					</div>
 					
 <!-- 					<input type="reset" value="Reset Form" data-theme="d" /> -->
-				
+					<a href="#itemFormError" id="formErrorLink" data-rel="dialog" data-transition="fade"></a>
 				</form>
 		</div>
 		
@@ -171,6 +171,19 @@
 -->
 	
 	</div> <!-- End of "additem" page -->
+	
+	<div data-role="dialog" id="itemFormError">
+		
+		<div data-role="header" data-position="fixed">
+			<h1>Ummm, so...</h1>
+		</div>
+		
+		<div data-role="content">
+			<p>Ok, so you have to put in a name. I mean, if you don't have a name for the item, why are you even attempting to add it?</p>
+		</div>
+	
+	
+	</div> <!-- End itemFormError page -->
 	
 	<div data-role="page" id="newsfeed">
 		
@@ -319,7 +332,8 @@
 	<!-- JavaScript under here -->
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
-	<script type="text/javascript" src="js/json.js"></script>
+	<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
+	<!-- <script type="text/javascript" src="js/json.js"></script> -->
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
