@@ -12,13 +12,14 @@
 		<!-- Mobile IE needs ClearType for smoothing fonts -->
 	<meta http-equiv="cleartype" content="on">
 		<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="themes/datcolor.min.css" />
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
 	<link rel="stylesheet" href="css/style.css" />
 		<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 	<script src="js/libs/modernizr.custom.min.js"></script>
 </head>
 <body>
-	<div data-role="page" id="home">
+	<div data-role="page" id="home" data-theme="a">
 	
 		<div data-role="header" data-position="fixed">
 			<h1>Shopping List</h1>
@@ -74,7 +75,7 @@
 			</ul>
 		</div>
 		
-		<div data-role="footer" data-position="fixed" data-id="constant">
+		<div data-role="footer" data-position="fixed" data-id="constant" data-theme="b">
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#home" data-icon="home" class="ui-btn-active ui-state-persist">Home/Browse</a></li>
@@ -88,7 +89,7 @@
 	</div> <!-- End "home" page -->
 	
 	
-	<div data-role="page" id="addItem">
+	<div data-role="page" id="addItem" data-theme="a">
 	
 		<div data-role="header" data-position="fixed">
 			<!-- <a href="#home" data-icon="home" data-iconpos="notext" data-theme="e"></a> -->
@@ -148,7 +149,7 @@
 				</form>
 		</div>
 		
-		<div data-role="footer" data-position="fixed" data-id="constant">
+		<div data-role="footer" data-position="fixed" data-id="constant" data-theme="b">
 			<br>
 			<div data-role="navbar" data-iconpos="left">
 				<ul>
@@ -173,7 +174,7 @@
 	
 	</div> <!-- End of "additem" page -->
 	
-	<div data-role="dialog" id="itemFormError">
+	<div data-role="dialog" id="itemFormError" data-theme="a">
 		
 		<div data-role="header" data-position="fixed">
 			<h1>Ummm, so...</h1>
@@ -186,7 +187,7 @@
 	
 	</div> <!-- End itemFormError page -->
 	
-	<div data-role="page" id="newsfeed">
+	<div data-role="page" id="newsfeed" data-theme="a">
 		
 			<div data-role="header" data-position="fixed">
 				<!-- <a href="#home" data-icon="home" data-iconpos="notext" data-theme="e"></a> -->
@@ -228,7 +229,7 @@
 				</div>
 			</div>
 			
-			<div data-role="footer" data-position="fixed" data-id="constant">
+			<div data-role="footer" data-position="fixed" data-id="constant" data-theme="b">
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#home" data-icon="home">Home/Browse</a></li>
@@ -241,7 +242,7 @@
 		
 		</div> <!-- End of "newsfeed" page -->
 		
-	<div data-role="page" id="about">
+	<div data-role="page" id="about" data-theme="a">
 		
 			<div data-role="header" data-position="fixed">
 				<!-- <a href="#home" data-icon="home" data-iconpos="notext" data-theme="e"></a> -->
@@ -268,7 +269,7 @@
 				<a data-role="button" href="#home" id="clearStorage">Clear Local Storage</a>
 			</div>
 			
-			<div data-role="footer" data-position="fixed" data-id="constant">
+			<div data-role="footer" data-position="fixed" data-id="constant"  data-theme="b">
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#home" data-icon="home">Home/Browse</a></li>
@@ -281,7 +282,7 @@
 		
 	</div> <!-- End of "about" page -->
 	
-	<div data-role="page" id="searchPage">
+	<div data-role="page" id="searchPage" data-theme="a">
 		
 			<div data-role="header" data-position="fixed">
 				<!-- <a href="#home" data-icon="home" data-iconpos="notext" data-theme="e"></a> -->
@@ -292,7 +293,7 @@
 				<p>This will eventually contain a search mechanism. I want to do it this way because I want to use the JQM data filter for live search. What I intend to do is populate the page with the entire contents of local storage so that they can be live filtered with the listview filter.</p>
 			</div>
 			
-			<div data-role="footer" data-position="fixed" data-id="constant">
+			<div data-role="footer" data-position="fixed" data-id="constant" data-theme="a">
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#home" data-icon="home">Home/Browse</a></li>
@@ -305,11 +306,11 @@
 		
 		</div> <!-- End of "searchPage" page -->
 	
-	<div data-role="page" id="error404"> <!-- Begin 404, which should be obvious by the ID -->
+	<div data-role="page" id="error404" data-theme="a"> <!-- Begin 404, which should be obvious by the ID -->
 	
 		<div data-role="header" data-position="fixed">
 			<!-- <a href="#home" data-icon="home" data-iconpos="notext" data-theme="e"></a> -->
-			<h1>404:File Not Found</h1>
+			<h2>404:File Not Found</h2>
 		</div>
 		
 		<div data-role="content">
@@ -323,7 +324,7 @@
 			</p>
 		</div>
 		
-		<div data-role="footer" data-position="fixed" data-id="constant">
+		<div data-role="footer" data-position="fixed" data-id="constant" data-theme="b">
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#home" data-icon="home">Home/Browse</a></li>
