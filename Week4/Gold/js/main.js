@@ -3,7 +3,8 @@ $('#home').on('pageinit', function(){
 });
 
 $('#about').on('pageinit', function(){
-	$("clearStorage").on('click', clearLocal());
+	//$("clearStorage").on('click', clearLocal());
+	$("clearStorage").click(function(){clearLocal()};);
 });	
 		
 $('#addItem').on('pageinit', function(){
